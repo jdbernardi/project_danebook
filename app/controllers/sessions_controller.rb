@@ -9,7 +9,7 @@ class SessionsController < ApplicationController
 
 	      sign_in(@user)
 	      flash[:success] = "You've successfully signed in"
-	      redirect_to root_url_path
+	      redirect_to root_url
 	    else
 	      flash.now[:error] = "We couldn't sign you in"
 	      render :new
@@ -19,7 +19,7 @@ class SessionsController < ApplicationController
 	def destroy
 	    sign_out
 	    flash[:success] = "You've successfully signed out"
-	    redirect_to root_url_path
+	    redirect_to root_url
 	end
 
 
