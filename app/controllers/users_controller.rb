@@ -21,7 +21,14 @@ class UsersController < ApplicationController
 
 
   def new
-    @user = User.new
+
+    if signed_in_user?
+      @user = User.find( session[:user_id] )
+      redirect_to user_path( @user )
+    else
+      @user = User.new
+    end
+
   end
 
 

@@ -209,6 +209,23 @@ h3 {
 
 }
 
+.login-header {
+
+  background-color: #2b78e4;
+  color: white;
+  font-family: arial, sans-serif;
+  font-size: 20px;
+  text-align: right;
+  padding: 5px 0 2px 0;
+
+}
+
+.login-header input {
+
+  color: black;
+
+}
+
 .footer-border-top {
   border-top: 1px solid #333333;
 }
