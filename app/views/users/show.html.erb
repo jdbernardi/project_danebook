@@ -1,0 +1,377 @@
+
+<div class="container">
+
+<h2 class="center">Welcome <%= @user.email %>!</h1>
+
+<%= render partial: '/shared/cover_photo' %>
+
+
+  <!--row for home about photos friends links-->
+  <!-- remove btn-link to show page currently selected-->
+
+
+
+        <%= render partial: '/shared/nav_links' %>
+
+<!--About box LEFT SIDE -->
+
+<div class="row">
+
+    <div class="col-sm-5">
+        <div class="row">
+            <div class="col-sm-10 col-sm-offset-1 generic-box">
+                    <div class="row">
+                        <header class="col-sm-12 default-box-header text-center">
+                            <h4>About</h4>
+                        </header>
+                    </div>
+                    <!--content for about box-->
+                    <article class="row tbmargins">
+                            <div class="col-sm-12">
+                                <p>Born on: December 22nd, 1982</p>
+                            </div>
+                            <div class="col-sm-12">
+                                <p>Went to school at: Hogwarts</p>
+                            </div>
+                            <div class="col-sm-12">
+                                <p>Hometown: Palatine, IL</p>
+                            </div>
+                            <div class="col-sm-12">
+                                <p>Currently Lives: Schaumburg, IL</p>
+                            </div>
+                    </article>
+        </div>
+      </div>
+
+        <div class="row">
+            <div class="col-sm-10 col-sm-offset-1 generic-box">
+                    <div class="row">
+                        <header class="col-sm-12 default-box-header text-center">
+                            <h4>Photos</h4>
+                        </header>
+                    </div>
+
+<!--photos aside-->
+
+            <% 3.times do %>
+
+                <%= render partial: '/shared/timeline_photos' %>
+
+            <% end %>
+
+            <!--SEE MORE PHOTOS LINK-->
+            <div class="row">
+                <a href="photos.html"><p class="col-sm-12 text-center">See More Photos</p></a>
+            </div><!--/.see more photos link-->
+
+        </div>
+      </div>
+
+<!--FRIENDS ASIDE-->
+<div class="row">
+            <div class="col-sm-10 col-sm-offset-1 generic-box">
+                    <div class="row">
+                        <header class="col-sm-12 default-box-header text-center">
+                            <h4>Friends</h4>
+                        </header>
+                    </div>
+
+
+
+<!--FRIENDS ASIDE-->
+
+            <div class="row">
+
+                <% 3.times do %>
+
+                <%= render partial: '/shared/timeline_friend_photo' %>
+
+                <% end %>
+
+            </div> <!--/.row photo ROW -->
+
+            <!--FRIENDS ROW Second-->
+            <div class="row">
+
+                    <div class="col-md-4 col-xs-6">
+                              <!--friend  box-->
+                                <a href="#"><img class="h-center aside-photo-container aside-photo" src="user_silhouette_generic.gif"></a>
+                            <!--/.image-->
+                            <!--friend image caption-->
+                            <div class="row">
+                                <div class="col-xs-12">
+                                    <a href="#"><p class="text-center">Ronald Weasley<p></a>
+                                </div>
+                            </div>
+                    </div><!--photo box-->
+
+
+                    <div class="col-md-4 col-xs-6">
+                              <!--friend  box-->
+                                <a href="#"><img class="h-center aside-photo-container aside-photo" src="user_silhouette_generic.gif"></a>
+                            <!--/.image-->
+                            <!--friend image caption-->
+                            <div class="row">
+                                <div class="col-xs-12">
+                                    <a href="#"><p class="text-center">Ronald Weasley<p></a>
+                                </div>
+                            </div>
+                    </div><!--photo box-->
+
+                    <div class="col-md-4 col-xs-6">
+                              <!--friend  box-->
+                                <a href="#"><img class="h-center aside-photo-container aside-photo" src="user_silhouette_generic.gif"></a>
+                            <!--/.image-->
+                            <!--friend image caption-->
+                            <div class="row">
+                                <div class="col-xs-12">
+                                    <a href="#"><p class="text-center">Ronald Weasley<p></a>
+                                </div>
+                            </div>
+                    </div><!--photo box-->
+
+            </div> <!--/.row Friends ROW Second-->
+
+            <!--SEE MORE PHOTOS LINK-->
+            <div class="row">
+                <a href="friends.html"><p class="col-sm-12 text-center">Find More Friends</p></a>
+            </div><!--/.see more photos link-->
+
+        </div>
+      </div>
+
+</div><!--/.LEFT COLUMN-->
+
+<!--POST BOX-->
+    <div class="col-sm-7">
+        <div class="row">
+            <div class="col-sm-10 col-sm-offset-1 generic-box">
+
+                    <div class="row">
+                        <header class="col-sm-12 default-box-header text-center">
+                            <h4>Post</h4>
+                        </header>
+                    </div>
+                    <article class="row tbmargins">
+                        <textarea class="form-control col-xs-offset-1 form-margins" rows="6" placeholder="Post something for the world to see!"></textarea>
+                    </article>
+
+                    <footer class="row">
+                        <div class="col-xs-12 default-box-header">
+                            <button type="button" class="btn btn-sm btn-primary pull-right">Post</button>
+                        </div>
+                    </footer>
+        </div>
+
+      </div>
+
+<!--Photos-->
+
+
+<!--USER POSTS-->
+        <div class="row">
+            <div class="col-sm-10 col-sm-offset-1 generic-box">
+
+                    <header class="row tbmargins">
+                        <div class="col-sm-3 col-xs-3 text-center">
+                            <a href="#"><img class="friend-photo" src="user_silhouette_generic.gif"></a>
+                        </div>
+                        <div class="col-sm-9">
+                            <a href="#">Harry Potter</a>
+                            <p class="post-caption">Posted Thursday, April 23rd 2016</p>
+                        </div>
+                    </header>
+
+
+                    <article class="row tbmargins">
+                        <p class="col-sm-10 col-sm-offset-1">
+                            Lorem ipsum Labore veniam cillum nostrud non nulla aliquip consectetur tempor sint ut ex quis labore sint sed sed laboris do in amet magna Duis dolor exercitation.
+                        </p>
+                    </article>
+
+                    <footer class="row default-box-header">
+                        <div class="col-xs-2">
+                            <a href="#">Like</a>
+                        </div>
+                        <div class="col-xs-2">
+                            <a href="#">Comment</a>
+                        </div>
+                        <div class="col-xs-2 pull-right">
+                            <a href="#">Delete</a>
+                        </div>
+                    </footer>
+        </div>
+      </div>
+
+
+<!--NEXT POST-->
+        <div class="row">
+            <div class="col-sm-10 col-sm-offset-1 generic-box">
+
+                    <header class="row tbmargins">
+                        <div class="col-sm-3 text-center">
+                            <a href="#"><img class="friend-photo" src="user_silhouette_generic.gif"></a>
+                        </div>
+                        <div class="col-sm-9">
+                            <a href="#">Hermoine Grainger</a>
+                            <p class="post-caption">Posted Thursday, February 3rd 2016</p>
+                        </div>
+                    </header>
+
+
+                    <article class="row tbmargins">
+                        <p class="col-sm-10 col-sm-offset-1">
+                            Lorem ipsum Labore veniam cillum nostrud non nulla aliquip consectetur tempor sint ut ex quis labore sint sed sed laboris do in amet magna Duis dolor exercitation.
+                        </p>
+                    </article>
+
+                    <footer class="row default-box-header">
+                        <div class="col-xs-2">
+                            <a href="#">Like</a>
+                        </div>
+                        <div class="col-xs-2">
+                            <a href="#">Comment</a>
+                        </div>
+                        <div class="col-xs-2 pull-right">
+                            <a href="#">Delete</a>
+                        </div>
+
+                        <div class="row remove-margin">
+                            <div class="col-xs-12">
+                              <p>
+                                <a href="#">Baxter</a>&nbsp;likes this.
+                              </p>
+                            </div>
+                        </div>
+                    </footer>
+        </div>
+      </div>
+
+<!--FINAL POST-->
+
+        <div class="row">
+            <div class="col-sm-10 col-sm-offset-1 generic-box">
+<!--Leading post-->
+                    <header class="row tbmargins">
+                        <div class="col-sm-3 text-center">
+                            <a href="#"><img class="friend-photo" src="user_silhouette_generic.gif"></a>
+                        </div>
+                        <div class="col-sm-9">
+                            <a href="#">Burt Macklin</a>
+                            <p class="post-caption">Posted Thursday, June 7th 2015</p>
+                        </div>
+                    </header>
+
+
+                    <article class="row tbmargins">
+                        <p class="col-sm-10 col-sm-offset-1">
+                            Lorem ipsum Labore veniam cillum nostrud non nulla aliquip consectetur tempor sint ut ex quis labore sint sed sed laboris do in amet magna Duis dolor exercitation.
+                        </p>
+                    </article>
+
+                    <footer class="row default-box-header">
+                        <div class="col-xs-2">
+                            <a href="#">Like</a>
+                        </div>
+                        <div class="col-xs-2">
+                            <a href="#">Comment</a>
+                        </div>
+                        <div class="col-xs-2 pull-right">
+                            <a href="#">Delete</a>
+                        </div>
+
+                        <div class="row remove-margin">
+                            <div class="col-xs-12">
+                              <p class="post-caption">
+                                You&nbsp;and&nbsp;<a href="#">Hermoine Grainger</a>&nbsp;like this.
+                              </p>
+                            </div>
+                        </div>
+                    </footer>
+
+<!--next post in leading post-->
+                    <div class="row default-box-header">
+                        <div class="col-sm-3 text-center">
+                            <a href="#"><img class="friend-photo" src="user_silhouette_generic.gif"></a>
+                        </div>
+                        <div class="col-sm-9">
+                            <p class="post-caption"><a href="#">Ronald Weasley</a>&nbsp;said on Monday, April 12th, 2016</p>
+                        </div>
+                        <div class="row remove-margin">
+                            <article class="col-sm-10 col-offset-1">
+                                <p>
+                                    Lorem ipsum Aliquip cupidatat ea sed sint in veniam anim deserunt et dolor tempor consectetur nostrud culpa id ad dolore irure deserunt commodo incididunt amet mollit velit Excepteur qui nostrud dolor velit et occaecat aliqua in incididunt in fugiat est.
+                                </p>
+                                <div class="row remove-margin">
+                                    <div class="col-sm-2">
+                                        <a href="#">Like</a>
+                                    </div>
+                                    <div class="col-sm-10">
+                                        <p class="post-caption">4 other people like this</p>
+                                    </div>
+                                </div>
+                            </article>
+                      </div>
+                    </div>
+<!--last post in leading post-->
+                    <div class="row default-box-header">
+                        <div class="col-sm-3 text-center">
+                            <a href="#"><img class="friend-photo" src="user_silhouette_generic.gif"></a>
+                        </div>
+                        <div class="col-sm-9">
+                            <p class="post-caption"><a href="#">Jack Skellington</a>&nbsp;said on Sunday, May 11th, 2016</p>
+                        </div>
+                        <div class="row remove-margin">
+                            <article class="col-sm-10 col-offset-1">
+                                <p>
+                                    Lorem ipsum Aliquip cupidatat ea sed sint in veniam anim deserunt et dolor tempor consectetur nostrud culpa id ad dolore irure deserunt commodo incididunt amet mollit velit Excepteur qui nostrud dolor velit et occaecat aliqua in incididunt in fugiat est.
+                                </p>
+                                <div class="row remove-margin">
+                                    <div class="col-sm-2">
+                                        <a href="#">Like</a>
+                                    </div>
+                                    <div class="col-sm-8">
+                                        <p class="post-caption">4 other people like this</p>
+                                    </div>
+                                    <div class="col-sm-2 pull-right">
+                                        <a href="#">Delete</a>
+                                    </div>
+                                </div>
+                            </article>
+                      </div>
+                    </div>
+
+        <div class="row default-box-header">
+            <div class="col-sm-12">
+                    <article class="row tbmargins">
+                        <textarea class="form-control col-xs-offset-1 form-margins" rows="6" placeholder="Write a comment..."></textarea>
+                    </article>
+
+                    <footer class="row">
+                        <div class="col-xs-3">
+                            <a href="#">Delete</a>
+                        </div>
+                        <div class="col-xs-3 pull-right">
+                            <button type="button" class="btn btn-sm btn-primary pull-right">Comment</button>
+                        </div>
+                    </footer>
+        </div>
+      </div>
+
+        </div>
+      </div>
+
+
+
+
+    </div><!--col-sm-7 row-->
+
+</div><!--main-row-->
+
+
+</div> <!--/.container-->
+
+
+
+
+

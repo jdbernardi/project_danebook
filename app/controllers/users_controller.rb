@@ -6,7 +6,12 @@ class UsersController < ApplicationController
 
 
   def index
-    @users = User.all
+    if signed_in_user?
+      @user = User.find( session[:user_id] )
+      redirect_to user_path( @user )
+    else
+      redirect_to login_path
+    end
   end
 
 
@@ -28,12 +33,12 @@ class UsersController < ApplicationController
 
 
   def create
-byebug
+
     @user = User.new(whitelisted_user_params)
     if @user.save
       sign_in(@user)  # <<<<<<<
       flash[:success] = "Created new user!"
-      redirect_to @user
+      redirect_to user_path( @user )
     else
       flash.now[:error] = "Failed to Create User!"
       render :new
@@ -44,7 +49,7 @@ byebug
 
 
   def update
-byebug
+
     @user = User.find( params[:id] )
     if @user.update( whitelisted_user_params )
       flash[:success] = "Updated user!"

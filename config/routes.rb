@@ -3,7 +3,15 @@ Rails.application.routes.draw do
 
   root :to => "users#new"
 
-  resources :users, :only => [:new, :create, :update, :index]
+  resources :users, :only => [:new, :create, :update, :index] do
+
+  	member do
+
+  		get 'show' => 'users#show'
+
+  	end
+
+  end
   resource :session, :only => [:new, :create, :destroy]
   get 'login' => "sessions#new"
   delete 'logout' => "sessions#destroy"
