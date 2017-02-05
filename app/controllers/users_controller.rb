@@ -28,7 +28,7 @@ class UsersController < ApplicationController
 
 
   def create
-
+byebug
     @user = User.new(whitelisted_user_params)
     if @user.save
       sign_in(@user)  # <<<<<<<
@@ -69,16 +69,13 @@ byebug
     end
 
     def whitelisted_user_params
-      params.require(:user).permit(:username, :email, :password, :password_confirmation)
+      params.require(:user).permit(:email, :password, :password_confirmation)
     end
 
 
     def authenticate
-
       authenticate_or_request_with_http_digest do | username |
         USERS[ username ]
       end
-
-
     end
 end

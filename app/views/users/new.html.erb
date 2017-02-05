@@ -20,7 +20,7 @@
           </td>
         </tr>
         <tr>
-          <td id="newsfeed" class="table-icon"> 
+          <td id="newsfeed" class="table-icon">
           </td>
           <td>
           See photos and updates <span class="small-table-font">in your news feed </span>
@@ -38,16 +38,29 @@
 
     --><div class="sign-up-container">
 
+    <%= form_for @user do |user_fields| %>
+      <% if @user.errors.any? %>
+        <div id="error_explanation">
+          <h2><%= pluralize(@user.errors.count, "error") %> prohibited this user from being saved:</h2>
+
+          <ul>
+          <% @user.errors.full_messages.each do |message| %>
+            <li><%= message %></li>
+          <% end %>
+          </ul>
+        </div>
+      <% end %>
+
       <div class="big-font header">
           Sign Up or <%= link_to "Sign In", login_path, class: "small-table-font" %>
       </div>
 
-      <%= form_for( @user ) do | user_fields | %>
+
 
 
         <div>
           <%= user_fields.label :email %>
-          <%= user_fields.text_field :password %>
+          <%= user_fields.text_field :email %>
         </div>
         <div>
           <%= user_fields.label :password %>
